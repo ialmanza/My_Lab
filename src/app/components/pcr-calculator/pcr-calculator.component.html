@@ -1,0 +1,43 @@
+<div class="card mb-3">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    {{'Volumen inicial'}}
+    <div>
+      <button class="btn btn-primary" (click)="calcularVolumenInicial()">Calculate</button>
+    </div>
+
+  </div>
+  <div class="card-body" *ngIf="volumenInicialResult !== undefined">
+    Result: {{ volumenInicialResult }}
+  </div>
+
+  <div  class="card-header d-flex justify-content-between align-items-center">
+    {{'Agua'}}
+
+    <div>
+      <button class="btn btn-primary" (click)="calcularAgua()">Calculate</button>
+    </div>
+
+  </div>
+  <div class="card-body" *ngIf="aguaResult !== undefined">
+    Result: {{ aguaResult }}
+  </div>
+
+  <div  class="card-header d-flex justify-content-between align-items-center">
+    {{'Mix de Reacción'}}
+
+    <input type="number" class="form-control" id="inputTubosDeReaccion" placeholder="Ingrese cantidad de tubos de reacción" >
+    <div>
+      <button class="btn btn-primary" (click)="calculoDelMixDeReaccion()">Calculate</button>
+    </div>
+
+  </div>
+  <div class="card-body" *ngIf="mixDeReaccionResult !== undefined">
+    Result: {{ mixDeReaccionResult }}
+  </div>
+
+
+
+
+</div>
+
+

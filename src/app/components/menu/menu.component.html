@@ -1,0 +1,24 @@
+<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+ <div mat-menu-item>
+    <a routerLink="/pcr-form" target="_blank">PCR</a>
+ </div>
+ <div mat-menu-item>
+    <a routerLink="/cadena-adn" target="_blank">Cadenas ADN</a>
+ </div>
+</mat-menu> -->
+
+<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/pcr-form" >PCR</button>
+  <button mat-menu-item routerLink="/cadena-adn" >Cadenas ADN</button>
+</mat-menu> -->
+
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="navegarApcrForm()" >PCR</button>
+  <button mat-menu-item (click)="navegarACadenasDeAdn()" >Cadenas ADN</button>
+</mat-menu>
+
+
+

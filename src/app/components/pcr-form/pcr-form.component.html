@@ -1,0 +1,79 @@
+<div>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-9">
+      <div class="card" >
+        <form [formGroup]="pcrForm" (ngSubmit)="addPcrForm()" >
+          <div class="form-group p-2">
+            <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="volumenFinal"> <br>
+            <input type="number" class="form-control" placeholder="Ingrese el volumen DNA:" formControlName="volumenDNA"> <br>
+            <input type="number" class="form-control" placeholder="Ingrese la cantidad de tubos de reacción:" formControlName="tubosDeReaccion"> <br>
+
+                <mat-tab-group>
+
+                  <mat-tab label="Buffer">
+                    <div class="form-group p-2">
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración inicial:" formControlName="bufferConcentracionInicial"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración final:" formControlName="bufferConcentracionFinal"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="bufferVolumenFinal"> <br>
+                    </div>
+                  </mat-tab>
+
+                  <mat-tab label="Magnesio">
+                    <div class="form-group p-2">
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración inicial:" formControlName="magnesioConcentracionInicial"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración final:" formControlName="magnesioConcentracionFinal"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="magnesioVolumenFinal"> <br>
+                    </div>
+                  </mat-tab>
+
+                  <mat-tab label="Primer Reverse">
+                    <div class="form-group p-2">
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración inicial:" formControlName="primerReverseConcentracionInicial"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración final:" formControlName="primerReverseConcentracionFinal"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="primerReverseVolumenFinal"> <br>
+                    </div>
+                  </mat-tab>
+
+                  <mat-tab label="Primer Forward">
+                    <div class="form-group p-2">
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración inicial:" formControlName="primerForwardConcentracionInicial"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración final:" formControlName="primerForwardConcentracionFinal"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="primerForwardVolumenFinal"> <br>
+                    </div>
+
+                  </mat-tab>
+
+                  <mat-tab label="DNTPS">
+                    <div class="form-group p-2">
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración inicial:" formControlName="dntpsConcentracionInicial"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración final:" formControlName="dntpsConcentracionFinal"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="dntpsVolumenFinal"> <br>
+                    </div>
+                  </mat-tab>
+
+                  <mat-tab label="Polimerasa">
+                    <div class="form-group p-2">
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración inicial:" formControlName="polimerasaConcentracionInicial"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese la concentración final:" formControlName="polimerasaConcentracionFinal"> <br>
+                      <input type="number" class="form-control" placeholder="Ingrese el volumen final:" formControlName="polimerasaVolumenFinal"> <br>
+                    </div>
+                  </mat-tab>
+
+                </mat-tab-group>
+
+                <button class="btn btn-primary">Enviar</button>
+
+
+
+            </div>
+        </form>
+      </div>
+    </div >
+
+    <div class="col-md-3">
+      <app-list-pcrs></app-list-pcrs>
+    </div>
+  </div>
+</div>
+

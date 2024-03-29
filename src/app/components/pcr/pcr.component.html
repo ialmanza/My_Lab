@@ -1,0 +1,71 @@
+
+<div class="card mb-3">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    {{'PCR'}}
+    <div>
+      <button class="btn btn-primary" (click)="pcrs && (pcrs.hide = !pcrs.hide)">
+        Show
+      </button>
+      <button class="btn btn-danger" (click)="deletePcr(pcrs!)">
+        Delete
+      </button>
+    </div>
+  </div>
+  <div class="card-body" *ngIf="pcrs" [hidden]="pcrs.hide">
+     {{'Volumen Final:'}} {{pcrs.volumenFinal}} <br>
+     {{'Volumen DNA:'}} {{pcrs.volumenDNA}} <br>
+     {{'Tubos de reacción:'}} {{pcrs.tubosDeReaccion}} <br>
+     {{'Concentración inicial Buffer:'}} {{pcrs.bufferConcentracionInicial}} <br>
+     {{'Concentración final Buffer:'}} {{pcrs.bufferConcentracionFinal}} <br>
+     {{'Buffer volumen final:'}} {{pcrs.bufferVolumenFinal}} <br>
+     {{'Concentración inicial primer Reverse:'}} {{pcrs.primerReverseConcentracionInicial}} <br>
+     {{'Concentración final primer Reverse:'}} {{pcrs.primerReverseConcentracionFinal}} <br>
+     {{'Primer Reverse volumen final:'}} {{pcrs.primerReverseVolumenFinal}} <br>
+     {{'Concentración inicial primer Forward:'}} {{pcrs.primerForwardConcentracionInicial}} <br>
+     {{'Concentración final primer Forward:'}} {{pcrs.primerForwardConcentracionFinal}} <br>
+     {{'Primer Forward volumen final:'}} {{pcrs.primerForwardVolumenFinal}} <br>
+     {{'Concentración inicial dntps:'}} {{pcrs.dntpsConcentracionInicial}} <br>
+     {{'Concentración final dntps:'}} {{pcrs.dntpsConcentracionFinal}} <br>
+     {{'Dntps volumen final:'}} {{pcrs.dntpsVolumenFinal}} <br>
+     {{'Concentración inicial polimerasa:'}} {{pcrs.polimerasaConcentracionInicial}} <br>
+     {{'Concentración final polimerasa:'}} {{pcrs.polimerasaConcentracionFinal}} <br>
+     {{'Polimerasa volumen final:'}} {{pcrs.polimerasaVolumenFinal}} <br>
+
+
+
+  </div>
+<!--PRUEBA DE UN SOLO PCR -->
+
+<!-- <div class="card mb-3">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    {{'PCR Simple'}}
+    <div>
+      <button class="btn btn-primary" (click)="pcrsSimple && (pcrsSimple.hide = !pcrsSimple.hide)">
+        Show
+      </button>
+      <button class="btn btn-danger" (click)="deletePcr(pcrsSimple!)">
+        Delete
+      </button>
+    </div>
+  </div>
+  <div class="card-body" *ngIf="pcrsSimple" [hidden]="pcrsSimple.hide">
+     {{'Concentracion Inicial:'}} {{pcrsSimple.concentracionInicial}} <br>
+     {{'Concentracion Final:'}} {{pcrsSimple.concentracionFinal}} <br>
+     {{'Volumen Final:'}} {{pcrsSimple.volumenFinal}} <br>
+     {{'Volumen DNA:'}} {{pcrsSimple.volumenDNA}} <br>
+     {{'Buffer:'}} {{pcrsSimple.bufferValue}} <br>
+     {{'Magnesio:'}} {{pcrsSimple.magnesioValue}} <br>
+     {{'Primer Reverse:'}} {{pcrsSimple.primerReverseValue}} <br>
+     {{'Primer Forward:'}} {{pcrsSimple.primerForwardValue}} <br>
+     {{'DNTPS:'}} {{pcrsSimple.dntpsValue}} <br>
+     {{'Polimerasa:'}} {{pcrsSimple.polimerasaValue}} <br>
+
+  </div> -->
+
+</div>
+
+
+
+
+
+

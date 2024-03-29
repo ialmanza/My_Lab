@@ -1,0 +1,14 @@
+<div>
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      {{'Cadena de ADN'}}
+      <input type="text" class="form-control" id="inputCadenaADN" placeholder="Ingresar cadena de ADN" [(ngModel)]="cadena">
+
+  </div>
+
+  <div class="card-body" *ngIf="resultado !== undefined">
+    Resultado: {{resultado}}
+
+    <br><br><br>
+  <button class="btn btn-primary" (click)="acortarCadena()">Enviar</button>
+</div>
