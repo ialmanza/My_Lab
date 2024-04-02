@@ -15,4 +15,12 @@ import { RouterModule } from '@angular/router';
 export class PrincipalComponent {
 
   constructor(private router: Router) {}
+
+  navegarApcrForm() {
+    this.router.navigate(['/pcr-form']);
+  }
+
+  navegarACadenasDeAdn() {
+    this.router.navigate(['/cadena-adn']);
+  }
 }

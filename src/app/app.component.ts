@@ -10,6 +10,7 @@ import { CadenaADNComponent } from "./components/cadena-adn/cadena-adn.component
 import { MenuComponent } from "./components/menu/menu.component";
 import { RouterModule } from '@angular/router';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,

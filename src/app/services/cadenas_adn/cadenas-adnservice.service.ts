@@ -7,7 +7,8 @@ export class CadenasADNServiceService {
  private cadena: string = "";
 
 
-  constructor() { }
+  constructor() {
+   }
 
   getCadena(): string {
     return this.cadena;
@@ -21,8 +22,11 @@ export class CadenasADNServiceService {
     let contador = 0;
     let resultado = "";
     for(let i = 0; i < cad.length; i++) {
-      resultado += cad.charAt(i);
-      contador += 1;
+      if(cad.charAt(i) != ' '){
+        resultado += cad.charAt(i);
+        contador += 1;
+      }
+
       if (contador === 3){
         resultado += " ";
         contador = 0;

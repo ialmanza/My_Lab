@@ -4,11 +4,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MatButtonModule, MatMenuModule, MatIconModule, RouterModule],
+  imports: [MatButtonModule,
+            MatMenuModule,
+            MatIconModule,
+            RouterModule,
+            MatSidenavModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
@@ -26,13 +31,14 @@ export class MenuComponent {
 
   navegarApcrForm() {
     this.router.navigate(['/pcr-form']);
-    window.open('/pcr-form', '_blank');
   }
 
   navegarACadenasDeAdn() {
     this.router.navigate(['/cadena-adn']);
-    window.open('/cadena-adn', '_blank');
   }
 
+  navigateToStart() {
+    this.router.navigate(['/']);
+  }
 
 }

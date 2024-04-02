@@ -5,8 +5,6 @@ import { Ipcr } from '../../models/Ipcr';
   providedIn: 'root'
 })
 export class PcrService {
-  //pcrsSimple: Ipcr;
-
   pcrs: Ipcr[];
   private volumenesIniciales: number[];
   private agua: number = 0.0;
@@ -64,26 +62,16 @@ export class PcrService {
         hide: true
        }
     ]
-  //   this.pcrsSimple = {
-  //     concentracionInicial: 1,
-  //       concentracionFinal: 2,
-  //       volumenFinal: 3,
-  //       volumenDNA: 4,
-  //       bufferValue: 5,
-  //       magnesioValue: 6,
-  //       primerReverseValue: 7,
-  //       primerForwardValue: 8,
-  //       dntpsValue: 9,
-  //       polimerasaValue: 10,
-  //       hide: true
-  //  }
+
   }
 
   getPcrs(){
     return this.pcrs;
   }
 
+
   addPcr(pcr: Ipcr){
+    console.log(pcr);
     this.pcrs.push(pcr);
   }
 
@@ -136,10 +124,6 @@ export class PcrService {
     return agua;
   }
 
-//VOY A PROBAR CON UN SOLO PCR Y NO UNA LISTA DE ELLOS
-  // getPcrSimple(){
-  //   console.log(this.pcrsSimple);
-  //   return this.pcrsSimple;
-  // }
+
 
 }

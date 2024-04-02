@@ -1,24 +1,30 @@
-<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
- <div mat-menu-item>
-    <a routerLink="/pcr-form" target="_blank">PCR</a>
- </div>
- <div mat-menu-item>
-    <a routerLink="/cadena-adn" target="_blank">Cadenas ADN</a>
- </div>
-</mat-menu> -->
-
-<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item routerLink="/pcr-form" >PCR</button>
-  <button mat-menu-item routerLink="/cadena-adn" >Cadenas ADN</button>
-</mat-menu> -->
+<!-- LO QUE MEJOR SE VE HASTA AHORA -->
 
 <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item (click)="navegarApcrForm()" >PCR</button>
   <button mat-menu-item (click)="navegarACadenasDeAdn()" >Cadenas ADN</button>
 </mat-menu>
+
+<!-- LO QUE QUEIRA HACER PERO ESTABA MAL -->
+
+<!-- <mat-sidenav-container>
+  <mat-sidenav mode="over" fixedInViewport="true" fixedTopGap="64">Start</mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="navegarApcrForm()" >PCR</button>
+    <button mat-button (click)="navegarACadenasDeAdn()" >Cadenas ADN</button>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- REVISAR!! -->
+
+<!-- <mat-sidenav-container>
+  <mat-sidenav mode="over" fixedInViewport="true" fixedTopGap="64">Start</mat-sidenav>
+  <mat-sidenav-content>
+     <button mat-button (click)="navegarApcrForm()" >PCR</button>
+     <button mat-button (click)="navegarACadenasDeAdn()" >Cadenas ADN</button>
+  </mat-sidenav-content>
+ </mat-sidenav-container> -->
 
 
 

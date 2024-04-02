@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PcrService } from '../../services/pcr/pcr.service';
 import {MatTabsModule} from '@angular/material/tabs';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListPcrsComponent } from "../list-pcrs/list-pcrs.component";
 

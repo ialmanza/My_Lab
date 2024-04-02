@@ -13,6 +13,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { SidenavDrawerOverviewExampleComponent } from './components/sidenav-drawer-overview-example/sidenav-drawer-overview-example.component';
+import { SidenavOverviewExampleComponent } from './components/sidenav-overview-example/sidenav-overview-example.component';
+import { SidenavPositionExampleComponent } from './components/sidenav-position-example/sidenav-position-example.component';
 
 
 
@@ -34,6 +37,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
+    SidenavDrawerOverviewExampleComponent,
+    SidenavOverviewExampleComponent,
+    SidenavPositionExampleComponent
 
   ],
   providers: [
