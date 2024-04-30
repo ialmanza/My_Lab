@@ -1,28 +1,48 @@
 import { Injectable } from '@angular/core';
+import { Icadena } from '../../models/Icadena';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CadenasADNServiceService {
- private cadena: string = "";
+  cadenas: Icadena[];
 
 
   constructor() {
+    this.cadenas = [
+      {cadena: "ATGCGA", resultado: "adenina", hide: true},
+      {cadena: "TGGCCA", resultado: "guanina", hide: true},
+      {cadena: "ATGCCG", resultado: "citosina", hide: true}
+    ];
+
    }
 
-  getCadena(): string {
-    return this.cadena;
+  getCadenas() {
+    return this.cadenas;
  }
 
- setCadena(cadena: string): void {
-    this.cadena = cadena;
+ setCadena(cadena: Icadena[]) {
+    this.cadenas = cadena;
+ }
+ addCadena(cadena: Icadena) {
+    this.cadenas.push(cadena);
+
+ }
+
+ deleteCadena(cadena: Icadena) {
+    for (let i = 0; i < this.cadenas.length; i++) {
+      if (this.cadenas[i] === cadena) {
+        this.cadenas.splice(i, 1);
+      }
+    }
  }
 
  cortarCadena(cad: string): string {
     let contador = 0;
     let resultado = "";
+    let regex = /^[a-zA-Z]+$/;
     for(let i = 0; i < cad.length; i++) {
-      if(cad.charAt(i) != ' '){
+      if(cad.charAt(i) != ' '&& regex.test(cad.charAt(i))){
         resultado += cad.charAt(i);
         contador += 1;
       }
@@ -34,4 +54,6 @@ export class CadenasADNServiceService {
     }
     return resultado;
  }
+
+
 }

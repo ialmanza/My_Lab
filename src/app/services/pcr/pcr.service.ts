@@ -13,7 +13,7 @@ export class PcrService {
     this.volumenesIniciales = [];
     this.pcrs = [
       {
-        volumenFinal: 1,
+        volumenFinal: 20,
         volumenDNA: 2,
         tubosDeReaccion: 3,
         bufferConcentracionInicial: 4,

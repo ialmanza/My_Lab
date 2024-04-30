@@ -57,43 +57,48 @@ export class PcrFormComponent {
 
   }
 
-  addPcrForm() {
+  addPcrForm(  volumenFinal:HTMLInputElement, volumenDNA:HTMLInputElement, tubosDeReaccion:HTMLInputElement,
+               bufferConcentracionInicial:HTMLInputElement, bufferConcentracionFinal:HTMLInputElement, bufferVolumenFinal:HTMLInputElement,
+               magnesioConcentracionInicial:HTMLInputElement, magnesioConcentracionFinal:HTMLInputElement, magnesioVolumenFinal:HTMLInputElement,
+               primerReverseConcentracionInicial:HTMLInputElement, primerReverseConcentracionFinal:HTMLInputElement, primerReverseVolumenFinal:HTMLInputElement,
+               primerForwardConcentracionInicial:HTMLInputElement, primerForwardConcentracionFinal:HTMLInputElement, primerForwardVolumenFinal:HTMLInputElement,
+               dntpsConcentracionInicial:HTMLInputElement, dntpsConcentracionFinal:HTMLInputElement, dntpsVolumenFinal:HTMLInputElement,
+               polimerasaConcentracionInicial:HTMLInputElement, polimerasaConcentracionFinal:HTMLInputElement, polimerasaVolumenFinal:HTMLInputElement
+  ) {
     console.log("addPcrForm", this.pcrForm.value);
     this.pcrService.addPcr({
-      volumenFinal: parseFloat(this.pcrForm.get('volumenFinal')?.value ?? '0'),
-      volumenDNA: parseFloat(this.pcrForm.get('volumenDNA')?.value ?? '0'),
-      tubosDeReaccion: parseFloat(this.pcrForm.get('tubosDeReaccion')?.value ?? '0'),
+      volumenFinal: parseFloat(volumenFinal?.value ?? '0'),
+      volumenDNA: parseFloat(volumenDNA?.value ?? '0'),
+      tubosDeReaccion: parseFloat(tubosDeReaccion?.value ?? '0'),
 
-      bufferConcentracionInicial: parseFloat(this.pcrForm.get('bufferConcentracionInicial')?.value ?? '0'),
-      bufferConcentracionFinal: parseFloat(this.pcrForm.get('bufferConcentracionFinal')?.value ?? '0'),
-      bufferVolumenFinal: parseFloat(this.pcrForm.get('bufferVolumenFinal')?.value ?? '0'),
+      bufferConcentracionInicial: parseFloat(bufferConcentracionInicial?.value ?? '0'),
+      bufferConcentracionFinal: parseFloat(bufferConcentracionFinal?.value ?? '0'),
+      bufferVolumenFinal: parseFloat(bufferVolumenFinal?.value ?? '0'),
 
-      magnesioConcentracionInicial: parseFloat(this.pcrForm.get('magnesioConcentracionInicial')?.value ?? '0'),
-      magnesioConcentracionFinal: parseFloat(this.pcrForm.get('magnesioConcentracionFinal')?.value ?? '0'),
-      magnesioVolumenFinal: parseFloat(this.pcrForm.get('magnesioVolumenFinal')?.value ?? '0'),
+      magnesioConcentracionInicial: parseFloat(magnesioConcentracionInicial?.value ?? '0'),
+      magnesioConcentracionFinal: parseFloat(magnesioConcentracionFinal?.value ?? '0'),
+      magnesioVolumenFinal: parseFloat(magnesioVolumenFinal?.value ?? '0'),
 
-      primerReverseConcentracionInicial: parseFloat(this.pcrForm.get('primerReverseConcentracionInicial')?.value ?? '0'),
-      primerReverseConcentracionFinal: parseFloat(this.pcrForm.get('primerReverseConcentracionFinal')?.value ?? '0'),
-      primerReverseVolumenFinal: parseFloat(this.pcrForm.get('primerReverseVolumenFinal')?.value ?? '0'),
+      primerReverseConcentracionInicial: parseFloat(primerReverseConcentracionInicial?.value ?? '0'),
+      primerReverseConcentracionFinal: parseFloat(primerReverseConcentracionFinal?.value ?? '0'),
+      primerReverseVolumenFinal: parseFloat(primerReverseVolumenFinal?.value ?? '0'),
 
-      primerForwardConcentracionInicial: parseFloat(this.pcrForm.get('primerForwardConcentracionOInicial')?.value ?? '0'),
-      primerForwardConcentracionFinal: parseFloat(this.pcrForm.get('primerForwardConcentracionFinal')?.value ?? '0'),
-      primerForwardVolumenFinal: parseFloat(this.pcrForm.get('primerForwardVolumenFinal')?.value ?? '0'),
+      primerForwardConcentracionInicial: parseFloat(primerForwardConcentracionInicial?.value ?? '0'),
+      primerForwardConcentracionFinal: parseFloat(primerForwardConcentracionFinal?.value ?? '0'),
+      primerForwardVolumenFinal: parseFloat(primerForwardVolumenFinal?.value ?? '0'),
 
-      dntpsConcentracionInicial: parseFloat(this.pcrForm.get('dntpsConcentracionInicial')?.value ?? '0'),
-      dntpsConcentracionFinal: parseFloat(this.pcrForm.get('dntpsConcentracionFinal')?.value ?? '0'),
-      dntpsVolumenFinal: parseFloat(this.pcrForm.get('dntpsVolumenFinal')?.value ?? '0'),
+      dntpsConcentracionInicial: parseFloat(dntpsConcentracionInicial?.value ?? '0'),
+      dntpsConcentracionFinal: parseFloat(dntpsConcentracionFinal?.value ?? '0'),
+      dntpsVolumenFinal: parseFloat(dntpsVolumenFinal?.value ?? '0'),
 
-      polimerasaConcentracionInicial: parseFloat(this.pcrForm.get('polimerasaConcentracionInicial')?.value ?? '0'),
-      polimerasaConcentracionFinal: parseFloat(this.pcrForm.get('polimerasaConcentracionFinal')?.value ?? '0'),
-      polimerasaVolumenFinal: parseFloat(this.pcrForm.get('polimerasaVolumenFinal')?.value ?? '0'),
+      polimerasaConcentracionInicial: parseFloat(polimerasaConcentracionInicial?.value ?? '0'),
+      polimerasaConcentracionFinal: parseFloat(polimerasaConcentracionFinal?.value ?? '0'),
+      polimerasaVolumenFinal: parseFloat(polimerasaVolumenFinal?.value ?? '0'),
 
       hide: true
     });
 
-    // Limpiar el formulario
-    this.pcrForm.reset();
-}
+  }
 
 
 }

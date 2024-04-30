@@ -21,6 +21,6 @@ export class PrincipalComponent {
   }
 
   navegarACadenasDeAdn() {
-    this.router.navigate(['/cadena-adn']);
+    this.router.navigate(['/nueva-cadena']);
   }
 }

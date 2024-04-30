@@ -9,6 +9,7 @@ import { PcrCalculatorComponent } from "./components/pcr-calculator/pcr-calculat
 import { CadenaADNComponent } from "./components/cadena-adn/cadena-adn.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { RouterModule } from '@angular/router';
+import { CadenaFormComponent } from "./components/cadena-form/cadena-form.component";
 
 
 @Component({
@@ -17,15 +18,15 @@ import { RouterModule } from '@angular/router';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [CommonModule,
-              RouterModule,
-              RouterOutlet,
-              NavigationComponent,
-              PcrFormComponent,
-              PcrComponent,
-              ListPcrsComponent,
-              PcrCalculatorComponent,
-              CadenaADNComponent,
-              MenuComponent]
+        RouterModule,
+        RouterOutlet,
+        NavigationComponent,
+        PcrFormComponent,
+        PcrComponent,
+        ListPcrsComponent,
+        PcrCalculatorComponent,
+        CadenaADNComponent,
+        MenuComponent, CadenaFormComponent]
 })
 export class AppComponent {
   title = 'My_Lab';
