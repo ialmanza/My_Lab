@@ -19,7 +19,8 @@ export class CadenaNuevaFormComponent {
   ngOnInit() {}
 
   addCadena( newCadena: HTMLInputElement, newResultado: HTMLTextAreaElement) {
-    this.cadenasADNService.addCadena({ cadena: newCadena.value, resultado: newResultado.value, hide: true});
+    const id = Date.now().toString();
+    this.cadenasADNService.addCadena({ id, titulo: newCadena.value, resultado: newResultado.value, hide: true});
     newCadena.value = '';
     newResultado.value = '';
     newCadena.focus();

@@ -17,6 +17,7 @@ import { ListPcrsComponent } from "../list-pcrs/list-pcrs.component";
 })
 export class PcrFormComponent {
   pcrForm: FormGroup;
+  form: any;
 
   constructor( private pcrService: PcrService, private fb: FormBuilder) {
     this.pcrForm = this.fb.group({
@@ -65,8 +66,9 @@ export class PcrFormComponent {
                dntpsConcentracionInicial:HTMLInputElement, dntpsConcentracionFinal:HTMLInputElement, dntpsVolumenFinal:HTMLInputElement,
                polimerasaConcentracionInicial:HTMLInputElement, polimerasaConcentracionFinal:HTMLInputElement, polimerasaVolumenFinal:HTMLInputElement
   ) {
-    console.log("addPcrForm", this.pcrForm.value);
+    const id = Date.now().toString();
     this.pcrService.addPcr({
+      id,
       volumenFinal: parseFloat(volumenFinal?.value ?? '0'),
       volumenDNA: parseFloat(volumenDNA?.value ?? '0'),
       tubosDeReaccion: parseFloat(tubosDeReaccion?.value ?? '0'),
@@ -98,6 +100,37 @@ export class PcrFormComponent {
       hide: true
     });
 
+    volumenFinal.value = '';
+    volumenDNA.value = '';
+    tubosDeReaccion.value = '';
+
+    bufferConcentracionInicial.value = '';
+    bufferConcentracionFinal.value = '';
+    bufferVolumenFinal.value = '';
+
+    magnesioConcentracionInicial.value = '';
+    magnesioConcentracionFinal.value = '';
+    magnesioVolumenFinal.value = '';
+
+    primerReverseConcentracionInicial.value = '';
+    primerReverseConcentracionFinal.value = '';
+    primerReverseVolumenFinal.value = '';
+
+    primerForwardConcentracionInicial.value = '';
+    primerForwardConcentracionFinal.value = '';
+    primerForwardVolumenFinal.value = '';
+
+    dntpsConcentracionInicial.value = '';
+    dntpsConcentracionFinal.value = '';
+    dntpsVolumenFinal.value = '';
+
+    polimerasaConcentracionInicial.value = '';
+    polimerasaConcentracionFinal.value = '';
+    polimerasaVolumenFinal.value = '';
+
+
+    volumenFinal.focus();
+    return false;
   }
 
 

@@ -1,5 +1,6 @@
 export interface Icadena {
-  cadena: string;
+  id: string;
+  titulo: string;
   resultado: string;
   hide: boolean;
 }

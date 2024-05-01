@@ -20,8 +20,9 @@ export class CadenaNuevaListComponent {
   }
 
   ngOnInit():void {
-    this.cadenas = this.cadenasADNService.getCadenas();
-    console.log("Cadenas obtenidas en la lista:", this.cadenas);
+    this.cadenasADNService.getCadenas().subscribe((cadenas: Icadena[]) => {
+      this.cadenas = cadenas;
+    });
   }
 
 

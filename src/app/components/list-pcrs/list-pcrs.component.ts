@@ -21,9 +21,11 @@ export class ListPcrsComponent {
   }
 
   ngOnInit(): void {
-    this.pcrs = this.pcrService.getPcrs();
-  }
+    this.pcrService.getPcrs().subscribe((pcrs: Ipcr[]) => {
+      this.pcrs = pcrs;
+    });
 
+  }
 
 
 }

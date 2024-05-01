@@ -48,7 +48,7 @@ export class PcrComponent {
 
   deletePcr(pcrs: Ipcr) {
     if(confirm('Are you sure you want to delete this pcr?')) {
-      this.pcrService.deletePcr(pcrs);
+      this.pcrService.deletePcr(pcrs.id);
     }
 
   }
@@ -58,15 +58,13 @@ export class PcrComponent {
   }
 
   saveChanges() {
-    // Aquí podrías agregar lógica para guardar los cambios en tu backend
+    if (this.pcrs) {
+      this.pcrService.updatePcr(this.pcrs);
+    }
     this.toggleEdit(); // Desactiva la edición después de guardar
+
   }
 
-  pruebaCalculo() {
-    console.log(this.pcrs);
-    console.log(this.pcrs?.tubosDeReaccion);
-    console.log((this.pcrs?.tubosDeReaccion!) * 2);
-  }
 
   todosLosCalculosEmpezandoPorLosVolumenesIniciales() {
     // calculos de los volumenes iniciales

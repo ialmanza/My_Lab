@@ -5,11 +5,8 @@ import { NavigationComponent } from "./components/navigation/navigation.componen
 import { PcrFormComponent } from "./components/pcr-form/pcr-form.component";
 import { PcrComponent } from "./components/pcr/pcr.component";
 import { ListPcrsComponent } from "./components/list-pcrs/list-pcrs.component";
-import { PcrCalculatorComponent } from "./components/pcr-calculator/pcr-calculator.component";
-import { CadenaADNComponent } from "./components/cadena-adn/cadena-adn.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { RouterModule } from '@angular/router';
-import { CadenaFormComponent } from "./components/cadena-form/cadena-form.component";
 
 
 @Component({
@@ -24,9 +21,7 @@ import { CadenaFormComponent } from "./components/cadena-form/cadena-form.compon
         PcrFormComponent,
         PcrComponent,
         ListPcrsComponent,
-        PcrCalculatorComponent,
-        CadenaADNComponent,
-        MenuComponent, CadenaFormComponent]
+        MenuComponent]
 })
 export class AppComponent {
   title = 'My_Lab';

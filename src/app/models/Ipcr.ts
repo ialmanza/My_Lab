@@ -1,4 +1,5 @@
 export interface Ipcr{
+  id: string;
   volumenFinal: number;
   volumenDNA: number;
   tubosDeReaccion: number;

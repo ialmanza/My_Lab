@@ -24,7 +24,7 @@ export class CadenaNuevaComponent {
 
   deleteCadena(cadenas : Icadena) {
     if(confirm('Are you sure you want to delete this cadena?')) {
-      this.cadenasADNService.deleteCadena(cadenas);
+      this.cadenasADNService.deleteCadena(cadenas.id);
     }
   }
 
