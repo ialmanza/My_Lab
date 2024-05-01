@@ -36,6 +36,11 @@ export class PcrComponent {
   mixDeReaccionPolimerasa: number = 0.0;
   mixDeReaccionAgua: number = 0.0;
 
+  volumenDelDNA: number = 0.0;
+  cantidadDeTubos: number = 0.0;
+  cantidadTotalolumenesIniciales: number = 0.0;
+
+
 
 
   constructor(private pcrService: PcrService) {
@@ -87,6 +92,11 @@ export class PcrComponent {
     this.mixDeReaccionDntps = this.calculoDeMixDeReaccionDntps();
     this.mixDeReaccionPolimerasa = this.calculoDeMixDeReaccionPolimerasa();this.mixDeReaccionAgua = this.calculoDeMixDeReaccionAgua();
 
+    // Para mostrar
+    this.volumenDelDNA = this.pcrs?.volumenDNA!;
+    this.cantidadDeTubos = this.pcrs?.tubosDeReaccion!;
+    this.cantidadTotalolumenesIniciales = this.calculoDelTotalDeVolumenesIniciales() + this.valorDelAgua;
+
 
   }
 
@@ -135,5 +145,12 @@ export class PcrComponent {
     return valorMixDeReaccionAgua = this.valorDelAgua * this.pcrs?.tubosDeReaccion!;
   }
 
+  calculoDelTotalDeVolumenesIniciales() {
+    let sumatoria = 0.0;
+    for (let i = 0; i < this.volumenesIniciales.length; i++) {
+      sumatoria += this.volumenesIniciales[i];
+    }
+    return sumatoria;
+  }
 
 }

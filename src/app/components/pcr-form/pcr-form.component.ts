@@ -27,27 +27,27 @@ export class PcrFormComponent {
       //buffer
       bufferConcentracionInicial: [''],
       bufferConcentracionFinal: [''],
-      bufferVolumenFinal: [''],
+
       //magnesio
       magnesioConcentracionInicial: [''],
       magnesioConcentracionFinal: [''],
-      magnesioVolumenFinal: [''],
+
       //primerReverse
       primerReverseConcentracionInicial: [''],
       primerReverseConcentracionFinal: [''],
-      primerReverseVolumenFinal: [''],
+
       //primerForward
       primerForwardConcentracionInicial: [''],
       primerForwardConcentracionFinal: [''],
-      primerForwardVolumenFinal: [''],
+
       //dntps
       dntpsConcentracionInicial: [''],
       dntpsConcentracionFinal: [''],
-      dntpsVolumenFinal: [''],
+
       //polimerasa
       polimerasaConcentracionInicial: [''],
       polimerasaConcentracionFinal: [''],
-      polimerasaVolumenFinal: [''],
+
 
     });
 
@@ -59,12 +59,12 @@ export class PcrFormComponent {
   }
 
   addPcrForm(  volumenFinal:HTMLInputElement, volumenDNA:HTMLInputElement, tubosDeReaccion:HTMLInputElement,
-               bufferConcentracionInicial:HTMLInputElement, bufferConcentracionFinal:HTMLInputElement, bufferVolumenFinal:HTMLInputElement,
-               magnesioConcentracionInicial:HTMLInputElement, magnesioConcentracionFinal:HTMLInputElement, magnesioVolumenFinal:HTMLInputElement,
-               primerReverseConcentracionInicial:HTMLInputElement, primerReverseConcentracionFinal:HTMLInputElement, primerReverseVolumenFinal:HTMLInputElement,
-               primerForwardConcentracionInicial:HTMLInputElement, primerForwardConcentracionFinal:HTMLInputElement, primerForwardVolumenFinal:HTMLInputElement,
-               dntpsConcentracionInicial:HTMLInputElement, dntpsConcentracionFinal:HTMLInputElement, dntpsVolumenFinal:HTMLInputElement,
-               polimerasaConcentracionInicial:HTMLInputElement, polimerasaConcentracionFinal:HTMLInputElement, polimerasaVolumenFinal:HTMLInputElement
+               bufferConcentracionInicial:HTMLInputElement, bufferConcentracionFinal:HTMLInputElement,
+               magnesioConcentracionInicial:HTMLInputElement, magnesioConcentracionFinal:HTMLInputElement,
+               primerReverseConcentracionInicial:HTMLInputElement, primerReverseConcentracionFinal:HTMLInputElement,
+               primerForwardConcentracionInicial:HTMLInputElement, primerForwardConcentracionFinal:HTMLInputElement,
+               dntpsConcentracionInicial:HTMLInputElement, dntpsConcentracionFinal:HTMLInputElement,
+               polimerasaConcentracionInicial:HTMLInputElement, polimerasaConcentracionFinal:HTMLInputElement
   ) {
     const id = Date.now().toString();
     this.pcrService.addPcr({
@@ -75,27 +75,21 @@ export class PcrFormComponent {
 
       bufferConcentracionInicial: parseFloat(bufferConcentracionInicial?.value ?? '0'),
       bufferConcentracionFinal: parseFloat(bufferConcentracionFinal?.value ?? '0'),
-      bufferVolumenFinal: parseFloat(bufferVolumenFinal?.value ?? '0'),
 
       magnesioConcentracionInicial: parseFloat(magnesioConcentracionInicial?.value ?? '0'),
       magnesioConcentracionFinal: parseFloat(magnesioConcentracionFinal?.value ?? '0'),
-      magnesioVolumenFinal: parseFloat(magnesioVolumenFinal?.value ?? '0'),
 
       primerReverseConcentracionInicial: parseFloat(primerReverseConcentracionInicial?.value ?? '0'),
       primerReverseConcentracionFinal: parseFloat(primerReverseConcentracionFinal?.value ?? '0'),
-      primerReverseVolumenFinal: parseFloat(primerReverseVolumenFinal?.value ?? '0'),
 
       primerForwardConcentracionInicial: parseFloat(primerForwardConcentracionInicial?.value ?? '0'),
       primerForwardConcentracionFinal: parseFloat(primerForwardConcentracionFinal?.value ?? '0'),
-      primerForwardVolumenFinal: parseFloat(primerForwardVolumenFinal?.value ?? '0'),
 
       dntpsConcentracionInicial: parseFloat(dntpsConcentracionInicial?.value ?? '0'),
       dntpsConcentracionFinal: parseFloat(dntpsConcentracionFinal?.value ?? '0'),
-      dntpsVolumenFinal: parseFloat(dntpsVolumenFinal?.value ?? '0'),
 
       polimerasaConcentracionInicial: parseFloat(polimerasaConcentracionInicial?.value ?? '0'),
       polimerasaConcentracionFinal: parseFloat(polimerasaConcentracionFinal?.value ?? '0'),
-      polimerasaVolumenFinal: parseFloat(polimerasaVolumenFinal?.value ?? '0'),
 
       hide: true
     });
@@ -106,27 +100,21 @@ export class PcrFormComponent {
 
     bufferConcentracionInicial.value = '';
     bufferConcentracionFinal.value = '';
-    bufferVolumenFinal.value = '';
 
     magnesioConcentracionInicial.value = '';
     magnesioConcentracionFinal.value = '';
-    magnesioVolumenFinal.value = '';
 
     primerReverseConcentracionInicial.value = '';
     primerReverseConcentracionFinal.value = '';
-    primerReverseVolumenFinal.value = '';
 
     primerForwardConcentracionInicial.value = '';
     primerForwardConcentracionFinal.value = '';
-    primerForwardVolumenFinal.value = '';
 
     dntpsConcentracionInicial.value = '';
     dntpsConcentracionFinal.value = '';
-    dntpsVolumenFinal.value = '';
 
     polimerasaConcentracionInicial.value = '';
     polimerasaConcentracionFinal.value = '';
-    polimerasaVolumenFinal.value = '';
 
 
     volumenFinal.focus();

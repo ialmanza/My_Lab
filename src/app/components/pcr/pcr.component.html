@@ -45,11 +45,7 @@
       <label for="bufferConcentracionFinal">Concentración final Buffer:</label>
       <input id="bufferConcentracionFinal" type="text" [(ngModel)]="pcrs.bufferConcentracionFinal" />
     </div>
-    <span *ngIf="!editing"> {{'Buffer volumen final:'}} {{pcrs.bufferVolumenFinal}}</span> <br>
-    <div *ngIf="editing">
-      <label for="bufferVolumenFinal">Buffer volumen final:</label>
-      <input id="bufferVolumenFinal" type="text" [(ngModel)]="pcrs.bufferVolumenFinal" />
-    </div>
+
     <span *ngIf="!editing"> {{'Concentración inicial primer Reverse:'}} {{pcrs.primerReverseConcentracionInicial}}</span> <br>
     <div *ngIf="editing">
       <label for="primerReverseConcentracionicial">Concentración inicial primer Reverse:</label>
@@ -60,11 +56,7 @@
       <label for="primerReverseConcentracionFinal">Concentración final primer Reverse:</label>
       <input id="primerReverseConcentracionFinal" type="text" [(ngModel)]="pcrs.primerReverseConcentracionFinal" />
     </div>
-    <span *ngIf="!editing"> {{'Primer Reverse volumen final:'}} {{pcrs.primerReverseVolumenFinal}}</span> <br>
-    <div *ngIf="editing">
-      <label for="primerReverseVolumenFinal">Primer Reverse volumen final:</label>
-      <input id="primerReverseVolumenFinal" type="text" [(ngModel)]="pcrs.primerReverseVolumenFinal" />
-    </div>
+
     <span *ngIf="!editing"> {{'Concentración inicial primer Forward:'}} {{pcrs.primerForwardConcentracionInicial}}</span> <br>
     <div *ngIf="editing">
       <label for="primerForwardConcentracionicial">Concentración inicial primer Forward:</label>
@@ -75,15 +67,27 @@
       <label for="primerForwardConcentracionFinal">Concentración final primer Forward:</label>
       <input id="primerForwardConcentracionFinal" type="text" [(ngModel)]="pcrs.primerForwardConcentracionFinal" />
     </div>
-    <span *ngIf="!editing"> {{'Primer Forward volumen final:'}} {{pcrs.primerForwardVolumenFinal}}</span> <br>
+
+    <span *ngIf="!editing">{{"Concentración inicial Dntps:"}} {{pcrs.dntpsConcentracionInicial}}</span> <br>
     <div *ngIf="editing">
-      <label for="primerForwardVolumenFinal">Primer Forward volumen final:</label>
-      <input id="primerForwardVolumenFinal" type="text" [(ngModel)]="pcrs.primerForwardVolumenFinal" />
+      <label for="dntpsConcentracionicial">Concentración inicial Dntps:</label> <br>
+      <input id="dntpsConcentracionicial" type="text" [(ngModel)]="pcrs.dntpsConcentracionInicial" />
     </div>
-    <span *ngIf="!editing"> {{'Tubos de reacción:'}} {{pcrs.tubosDeReaccion}}</span> <br>
+    <span *ngIf="!editing">{{'Concentración final Dntps:'}} {{pcrs.dntpsConcentracionFinal}}</span> <br>
     <div *ngIf="editing">
-      <label for="tubosDeReaccion">Tubos de reacción:</label>
-      <input id="tubosDeReaccion" type="text" [(ngModel)]="pcrs.tubosDeReaccion" />
+      <label for="dntpsConcentracionFinal">Concentración final Dntps:</label> <br>
+      <input id="dntpsConcentracionFinal" type="text" [(ngModel)]="pcrs.dntpsConcentracionFinal" />
+    </div>
+
+    <span *ngIf="!editing">{{'Concentración inicial Polimerasa:'}} {{pcrs.polimerasaConcentracionInicial}}</span> <br>
+    <div *ngIf="editing">
+      <label for="polimerasaConcentracionicial">Concentración inicial Polimerasa:</label> <br>
+      <input id="polimerasaConcentracionicial" type="text" [(ngModel)]="pcrs.polimerasaConcentracionInicial" />
+    </div>
+    <span *ngIf="!editing">{{'Concentración final Polimerasa:'}} {{pcrs.polimerasaConcentracionFinal}}</span> <br>
+    <div *ngIf="editing">
+      <label for="polimerasaConcentracionFinal">Concentración final Polimerasa:</label> <br>
+      <input id="polimerasaConcentracionFinal" type="text" [(ngModel)]="pcrs.polimerasaConcentracionFinal" />
     </div>
     <br>
 
@@ -98,12 +102,13 @@
           Primer Reverse: {{volumenInicialPrimerReverse}} <br>
           Primer Forward: {{volumenInicialPrimerForward}}  <br>
           Dntps: {{volumenInicialDntps}} <br>
-          Polimerasa: {{volumenInicialPolimerasa}} <br> <br>
-
-      <strong>Valor del Agua</strong> <br>
+          Polimerasa: {{volumenInicialPolimerasa}} <br>
           Agua: {{valorDelAgua}} <br><br>
 
-      <strong>Mix de reaccion</strong> <br>
+      <strong>Valor del DNA</strong> <br>
+          DNA: {{volumenDelDNA}} <br><br>
+
+      <strong>Mix de reaccion para {{cantidadDeTubos}} tubos</strong> <br>
           Buffer: {{mixDeReaccionBuffer}} <br>
           Magnesio: {{mixDeReaccionMagnesio}} <br>
           Primer Reverse: {{mixDeReaccionPrimerReverse}} <br>
@@ -111,6 +116,8 @@
           Dntps: {{mixDeReaccionDntps}} <br>
           Polimerasa: {{mixDeReaccionPolimerasa}} <br>
           Agua: {{mixDeReaccionAgua}} <br><br>
+
+      <strong> Por tubo : </strong> <p>{{cantidadTotalolumenesIniciales}} µl de mix de reacción + {{volumenDelDNA}} µl de DNA</p>
     </div>
     <br><br>
     <button class="btn btn-primary w-30" (click) = "todosLosCalculosEmpezandoPorLosVolumenesIniciales()" >Calculo</button>
