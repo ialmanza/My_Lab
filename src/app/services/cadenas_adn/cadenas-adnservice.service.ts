@@ -30,24 +30,24 @@ export class CadenasADNServiceService {
  }
 
  deleteCadena(id: string) {
-  let storedPcrs = this.getCadenasFromLocalStorage();
-  storedPcrs = storedPcrs.filter((cadena: { id: string; }) => cadena.id !== id);
-  this.saveCadenasToLocalStorage(storedPcrs);
-  this.cadenasSubject.next(storedPcrs);
+  let storedCadenas = this.getCadenasFromLocalStorage();
+  storedCadenas = storedCadenas.filter((cadena: { id: string; }) => cadena.id !== id);
+  this.saveCadenasToLocalStorage(storedCadenas);
+  this.cadenasSubject.next(storedCadenas);
 
 }
 private loadCadenasFromLocalStorage() {
-  const storedPcrs = this.getCadenasFromLocalStorage();
-  this.cadenasSubject.next(storedPcrs);
+  const storedCadenas = this.getCadenasFromLocalStorage();
+  this.cadenasSubject.next(storedCadenas);
 }
 
 private getCadenasFromLocalStorage(): Icadena[] {
-  const storedPcrs = localStorage.getItem('pcrs');
-  return storedPcrs ? JSON.parse(storedPcrs) : [];
+  const storedCadenas = localStorage.getItem('cadenas');
+  return storedCadenas ? JSON.parse(storedCadenas) : [];
 }
 
-private saveCadenasToLocalStorage(pcrs: Icadena[]) {
-  localStorage.setItem('pcrs', JSON.stringify(pcrs));
+private saveCadenasToLocalStorage(cadenas: Icadena[]) {
+  localStorage.setItem('cadenas', JSON.stringify(cadenas));
 }
 
  cortarCadena(cad: string): string {
