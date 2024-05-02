@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { PcrFormComponent } from "../pcr-form/pcr-form.component";
 import { Ipcr } from '../../models/Ipcr';
 import { PcrService } from '../../services/pcr/pcr.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogAnimationsExampleDialog } from '../ventana-modal/ventana-modal.component';
 
 @Component({
     selector: 'app-pcr',
@@ -43,7 +45,7 @@ export class PcrComponent {
 
 
 
-  constructor(private pcrService: PcrService) {
+  constructor(private pcrService: PcrService, public dialog: MatDialog) {
 
   }
 
@@ -56,6 +58,19 @@ export class PcrComponent {
       this.pcrService.deletePcr(pcrs.id);
     }
 
+  }
+
+  deleteTask(pcrs: Ipcr) {
+    const dialogRef = this.dialog.open(DialogAnimationsExampleDialog, { // Abre la ventana modal
+      width: '250px',
+      data: pcrs// Puedes pasar datos al diálogo, como el objeto Task que se está eliminando
+    });
+
+    dialogRef.afterClosed().subscribe(result => { // Suscríbete al evento después de cerrar la ventana modal
+      if (result) { // Si se confirma la eliminación en el diálogo, elimina la tarea
+        this.pcrService.deletePcr(pcrs.id);
+      }
+    });
   }
 
   toggleEdit() {
